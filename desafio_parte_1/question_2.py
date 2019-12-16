@@ -9,8 +9,8 @@ def try_correct_order(string_to_test):
     size_string = len(string_to_test)
     if size_string % 2 != 0 or size_string == 0:
         return 'NÃO'
-    for element, i in enumerate(string_to_test[int(size_string / 2):]):
-        expected_pair = string_to_test[int(size_string / 2) - element - 1]
+    for index, i in enumerate(string_to_test[int(size_string / 2):]):
+        expected_pair = string_to_test[int(size_string / 2) - index - 1]
         if i in ['{', '[', '(']:
             return 'NÃO'
         if i == '}':
